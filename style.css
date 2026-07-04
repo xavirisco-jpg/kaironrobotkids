@@ -1,0 +1,7 @@
+body{margin:0;font-family:Arial,sans-serif;background:#eef7ff;color:#16324f}
+.hero{padding:80px 20px;text-align:center;background:linear-gradient(135deg,#3aa8ff,#7ed8ff);color:white}
+.btn{display:inline-block;margin-top:20px;padding:14px 22px;background:white;color:#1976d2;
+text-decoration:none;border-radius:10px;font-weight:bold}
+.card{max-width:900px;margin:30px auto;background:white;padding:25px;border-radius:14px;
+box-shadow:0 6px 18px rgba(0,0,0,.08)}
+footer{text-align:center;padding:30px;color:#666}
