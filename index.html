@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Kairon Robot Kids — magical stories, calm videos and friendly adventures for little explorers." />
-  <meta name="theme-color" content="#1554d9" />
+  <meta name="theme-color" content="#176ee5" />
   <title>Kairon Robot Kids</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -16,15 +16,11 @@
 
   <main id="main">
     <section class="hero" aria-labelledby="hero-title">
-      <div class="sky-glow glow-one"></div>
-      <div class="sky-glow glow-two"></div>
-      <div class="cloud cloud-a"></div>
-      <div class="cloud cloud-b"></div>
-      <div class="cloud cloud-c"></div>
-      <div class="tree tree-left" aria-hidden="true"></div>
-      <div class="castle" aria-hidden="true">
-        <span></span><span></span><span></span>
-      </div>
+      <div class="hero-light" aria-hidden="true"></div>
+      <div class="hero-sparkles" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      <div class="hero-cloud cloud-one" aria-hidden="true"></div>
+      <div class="hero-cloud cloud-two" aria-hidden="true"></div>
+      <div class="hero-cloud cloud-three" aria-hidden="true"></div>
 
       <header class="site-header wrap">
         <a class="brand" href="#top" aria-label="Kairon Robot Kids home">
@@ -50,15 +46,13 @@
         </div>
 
         <div class="hero-character" aria-hidden="true">
-          <div class="orbit orbit-one"></div>
-          <div class="orbit orbit-two"></div>
           <img src="assets/kairon-hero.png" alt="" />
         </div>
       </div>
     </section>
 
-    <section class="content-section">
-      <div class="cards wrap" aria-label="Explore Kairon">
+    <section class="content-section" aria-label="Explore Kairon">
+      <div class="cards wrap">
         <article class="feature-card kids-card">
           <div class="card-image-frame">
             <img src="assets/kids-card.png" alt="Kairon meeting a friendly green dragon in the forest" />
@@ -66,7 +60,7 @@
           </div>
           <h2 data-i18n="kidsTitle">For Kids</h2>
           <p data-i18n="kidsText">Join Kairon on exciting adventures. Meet dragons, trolls, dinosaurs, unicorns and many magical friends. Learn, play and explore together!</p>
-          <a class="card-button green" href="#youtube-link" data-i18n="learnMore">Learn More <span>›</span></a>
+          <a class="card-button green" href="#youtube-link"><span data-i18n="learnMore">Learn More</span><b aria-hidden="true">›</b></a>
         </article>
 
         <article class="feature-card parents-card">
@@ -76,12 +70,12 @@
           </div>
           <h2 data-i18n="parentsTitle">For Parents</h2>
           <p data-i18n="parentsText">Safe AI-generated stories and relaxing videos designed to encourage curiosity, imagination and calm moments together.</p>
-          <a class="card-button orange" href="#family-note" data-i18n="learnMore">Learn More <span>›</span></a>
+          <a class="card-button orange" href="#family-note"><span data-i18n="learnMore">Learn More</span><b aria-hidden="true">›</b></a>
         </article>
 
         <article class="message-card" id="message">
           <div class="message-icon" aria-hidden="true">✉️<b>⭐</b></div>
-          <h2 data-i18n="messageTitle">Send a Message<br />to Kairon</h2>
+          <h2 data-i18n-html="messageTitle">Send a Message<br />to Kairon</h2>
           <p data-i18n="messageText">Kairon loves to hear from you! Send a message and he will read it with joy.</p>
 
           <form id="contact-form" novalidate>
@@ -104,10 +98,10 @@
       </div>
 
       <div id="family-note" class="values wrap" aria-label="Kairon values">
-        <div class="value"><span aria-hidden="true">🛡️</span><p data-i18n="value1">Safe &amp; Family<br />Friendly</p></div>
-        <div class="value"><span aria-hidden="true">💗</span><p data-i18n="value2">Made with Love<br />and Imagination</p></div>
-        <div class="value"><span aria-hidden="true">⭐</span><p data-i18n="value3">Educational &amp;<br />Entertaining</p></div>
-        <div class="value"><span aria-hidden="true">☁️</span><p data-i18n="value4">Relaxing &amp;<br />Calming</p></div>
+        <div class="value"><span aria-hidden="true">🛡️</span><p data-i18n-html="value1">Safe &amp; Family<br />Friendly</p></div>
+        <div class="value"><span aria-hidden="true">💗</span><p data-i18n-html="value2">Made with Love<br />and Imagination</p></div>
+        <div class="value"><span aria-hidden="true">⭐</span><p data-i18n-html="value3">Educational &amp;<br />Entertaining</p></div>
+        <div class="value"><span aria-hidden="true">☁️</span><p data-i18n-html="value4">Relaxing &amp;<br />Calming</p></div>
       </div>
     </section>
   </main>
