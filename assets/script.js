@@ -9,7 +9,6 @@ const translations = {
     kidsText: 'Join Kairon on exciting adventures. Meet dragons, trolls, dinosaurs, unicorns and many magical friends. Learn, play and explore together!',
     parentsTitle: 'For Parents',
     parentsText: 'Safe AI-generated stories and relaxing videos designed to encourage curiosity, imagination and calm moments together.',
-    learnMore: 'Learn More',
     messageTitle: 'Send a Message<br>to Kairon',
     messageText: 'Kairon loves to hear from you! Send a message and he will read it with joy.',
     namePlaceholder: 'Your name',
@@ -39,7 +38,6 @@ const translations = {
     kidsText: 'Acompaña a Kairon en aventuras emocionantes. Conoce dragones, trolls, dinosaurios, unicornios y muchos amigos mágicos. ¡Aprende, juega y explora!',
     parentsTitle: 'Para familias',
     parentsText: 'Historias generadas con IA y vídeos relajantes pensados para despertar curiosidad, imaginación y momentos tranquilos en familia.',
-    learnMore: 'Saber más',
     messageTitle: 'Envía un mensaje<br>a Kairon',
     messageText: '¡A Kairon le encanta leerte! Envíale un mensaje y lo recibirá con mucha ilusión.',
     namePlaceholder: 'Tu nombre',
@@ -95,15 +93,14 @@ document.querySelectorAll('.lang').forEach((button) => {
   button.addEventListener('click', () => setLanguage(button.dataset.lang));
 });
 
-// GitHub Pages cannot receive form submissions itself. This opens the visitor's mail app.
-// Replace this address when the domain mailbox is ready.
-const INBOX_ADDRESS = 'hello@kaironrobotkids.com';
+const INBOX_ADDRESS = 'xavirisco@gmail.com';
 const form = document.getElementById('contact-form');
 const formStatus = document.getElementById('form-status');
 
 if (form && formStatus) {
   form.addEventListener('submit', (event) => {
     event.preventDefault();
+
     const name = document.getElementById('contact-name').value.trim();
     const email = document.getElementById('contact-email').value.trim();
     const message = document.getElementById('contact-message').value.trim();
@@ -112,6 +109,7 @@ if (form && formStatus) {
       formStatus.textContent = translations[language].formMissing;
       return;
     }
+
     if (!/^\S+@\S+\.\S+$/.test(email)) {
       formStatus.textContent = translations[language].formEmail;
       return;
@@ -126,4 +124,5 @@ if (form && formStatus) {
 
 const year = document.getElementById('year');
 if (year) year.textContent = new Date().getFullYear();
+
 setLanguage(language);

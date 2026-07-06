@@ -1,130 +1,117 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Kairon Robot Kids — magical stories, calm videos and friendly adventures for little explorers." />
-  <meta name="theme-color" content="#176ee5" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#1b80df">
+  <meta name="description" content="Kairon Robot Kids — magical stories, gentle learning and calm adventures.">
   <title>Kairon Robot Kids</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/styles.css" />
+  <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
+  <a class="skip-link" href="#content">Skip to content</a>
 
-  <main id="main">
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="hero-light" aria-hidden="true"></div>
-      <div class="hero-sparkles" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
-      <div class="hero-cloud cloud-one" aria-hidden="true"></div>
-      <div class="hero-cloud cloud-two" aria-hidden="true"></div>
-      <div class="hero-cloud cloud-three" aria-hidden="true"></div>
-
-      <header class="site-header wrap">
-        <a class="brand" href="#top" aria-label="Kairon Robot Kids home">
-          <img src="assets/kairon-logo.png" alt="Kairon Robot Kids" />
-        </a>
-
-        <div class="language-switch" role="group" aria-label="Language selector">
-          <button type="button" class="lang active" data-lang="en" aria-pressed="true">EN</button>
-          <button type="button" class="lang" data-lang="es" aria-pressed="false">ES</button>
+  <section class="hero" aria-label="Welcome to Kairon's magical world">
+    <div class="hero-shade" aria-hidden="true"></div>
+    <div class="wrap hero-inner">
+      <header class="site-header">
+        <div aria-hidden="true"></div>
+        <div class="language-switch" aria-label="Language">
+          <button class="lang active" type="button" data-lang="en" aria-pressed="true">EN</button>
+          <button class="lang" type="button" data-lang="es" aria-pressed="false">ES</button>
         </div>
       </header>
 
-      <div id="top" class="hero-content wrap">
+      <div class="hero-content">
         <div class="hero-copy">
           <p class="eyebrow"><span>⭐</span> <span data-i18n="welcome">Welcome to the</span> <span>⭐</span></p>
-          <h1 id="hero-title" data-i18n-html="heroTitle">magical<br />world of<br /><strong>Kairon!</strong></h1>
+          <h1 data-i18n-html="heroTitle">magical<br>world of<br><strong>Kairon!</strong></h1>
           <p class="hero-description" data-i18n="heroDescription">Explore magical forests, discover amazing creatures, learn, play and relax together.</p>
           <p class="adventure-note"><i></i><span data-i18n="adventure">New adventures await!</span><i></i></p>
-          <a id="youtube-link" class="youtube-button" href="https://www.youtube.com/@KaironRobotKids" target="_blank" rel="noopener noreferrer">
-            <span class="play-icon" aria-hidden="true">▶</span>
+          <a class="youtube-button" href="https://www.youtube.com/@KaironRobotKids" target="_blank" rel="noopener">
+            <span class="play-icon">▶</span>
             <span data-i18n="watchYoutube">Watch on YouTube</span>
           </a>
         </div>
 
-        <div class="hero-character" aria-hidden="true">
-          <img src="assets/kairon-hero.png" alt="" />
+        <div class="hero-character">
+          <img src="assets/kairon-hero.png" alt="Kairon waving in a magical forest">
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="content-section" aria-label="Explore Kairon">
-      <div class="cards wrap">
+  <main id="content" class="content-section">
+    <div class="wrap">
+      <section class="cards" aria-label="About Kairon">
         <article class="feature-card kids-card">
           <div class="card-image-frame">
-            <img src="assets/kids-card.png" alt="Kairon meeting a friendly green dragon in the forest" />
-            <span class="floating-icon leaf" aria-hidden="true">🌱</span>
+            <img src="assets/kids-card.png" alt="Kairon meeting a friendly green dragon in the forest">
+            <span class="floating-icon" aria-hidden="true">🌱</span>
           </div>
           <h2 data-i18n="kidsTitle">For Kids</h2>
           <p data-i18n="kidsText">Join Kairon on exciting adventures. Meet dragons, trolls, dinosaurs, unicorns and many magical friends. Learn, play and explore together!</p>
-          <a class="card-button green" href="#youtube-link"><span data-i18n="learnMore">Learn More</span><b aria-hidden="true">›</b></a>
         </article>
 
         <article class="feature-card parents-card">
           <div class="card-image-frame">
-            <img src="assets/parents-card.png" alt="A family reading with Kairon" />
+            <img src="assets/parents-card.png" alt="A family reading with Kairon">
             <span class="floating-icon family" aria-hidden="true">👨‍👩‍👧</span>
           </div>
           <h2 data-i18n="parentsTitle">For Parents</h2>
           <p data-i18n="parentsText">Safe AI-generated stories and relaxing videos designed to encourage curiosity, imagination and calm moments together.</p>
-          <a class="card-button orange" href="#family-note"><span data-i18n="learnMore">Learn More</span><b aria-hidden="true">›</b></a>
         </article>
 
-        <article class="message-card" id="message">
+        <section class="message-card" aria-labelledby="message-title">
           <div class="message-icon" aria-hidden="true">✉️<b>⭐</b></div>
-          <h2 data-i18n-html="messageTitle">Send a Message<br />to Kairon</h2>
+          <h2 id="message-title" data-i18n-html="messageTitle">Send a Message<br>to Kairon</h2>
           <p data-i18n="messageText">Kairon loves to hear from you! Send a message and he will read it with joy.</p>
 
           <form id="contact-form" novalidate>
             <label class="field">
-              <span aria-hidden="true">👤</span>
-              <input id="contact-name" name="name" autocomplete="name" maxlength="80" required data-i18n-placeholder="namePlaceholder" placeholder="Your name" />
+              <span aria-hidden="true">♟</span>
+              <input id="contact-name" type="text" autocomplete="name" data-i18n-placeholder="namePlaceholder" placeholder="Your name" aria-label="Your name">
             </label>
             <label class="field">
               <span aria-hidden="true">✉</span>
-              <input id="contact-email" name="email" type="email" autocomplete="email" maxlength="160" required data-i18n-placeholder="emailPlaceholder" placeholder="Your email" />
+              <input id="contact-email" type="email" autocomplete="email" data-i18n-placeholder="emailPlaceholder" placeholder="Your email" aria-label="Your email">
             </label>
             <label class="field text-area">
               <span aria-hidden="true">✎</span>
-              <textarea id="contact-message" name="message" maxlength="1000" required data-i18n-placeholder="messagePlaceholder" placeholder="Your message..."></textarea>
+              <textarea id="contact-message" rows="3" data-i18n-placeholder="messagePlaceholder" placeholder="Your message..." aria-label="Your message"></textarea>
             </label>
-            <button class="send-button" type="submit"><span aria-hidden="true">➤</span> <span data-i18n="send">Send Message</span></button>
-            <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+            <button class="send-button" type="submit"><span aria-hidden="true">➤</span><span data-i18n="send">Send Message</span></button>
+            <p class="form-status" id="form-status" aria-live="polite"></p>
           </form>
-        </article>
-      </div>
+        </section>
+      </section>
 
-      <div id="family-note" class="values wrap" aria-label="Kairon values">
-        <div class="value"><span aria-hidden="true">🛡️</span><p data-i18n-html="value1">Safe &amp; Family<br />Friendly</p></div>
-        <div class="value"><span aria-hidden="true">💗</span><p data-i18n-html="value2">Made with Love<br />and Imagination</p></div>
-        <div class="value"><span aria-hidden="true">⭐</span><p data-i18n-html="value3">Educational &amp;<br />Entertaining</p></div>
-        <div class="value"><span aria-hidden="true">☁️</span><p data-i18n-html="value4">Relaxing &amp;<br />Calming</p></div>
-      </div>
-    </section>
+      <section class="values" aria-label="Kairon values">
+        <div class="value"><span aria-hidden="true">🛡️</span><p data-i18n-html="value1">Safe &amp; Family<br>Friendly</p></div>
+        <div class="value"><span aria-hidden="true">💗</span><p data-i18n-html="value2">Made with Love<br>and Imagination</p></div>
+        <div class="value"><span aria-hidden="true">⭐</span><p data-i18n-html="value3">Educational &amp;<br>Entertaining</p></div>
+        <div class="value"><span aria-hidden="true">☁️</span><p data-i18n-html="value4">Relaxing &amp;<br>Calming</p></div>
+      </section>
+    </div>
   </main>
 
   <footer class="site-footer">
-    <div class="footer-stars" aria-hidden="true">✦　·　✦　·　✦　·　✦</div>
+    <div class="footer-stars" aria-hidden="true">✦ · ✦ · ✦ · ✦</div>
     <div class="wrap footer-row">
-      <a class="footer-brand" href="#top" aria-label="Back to top"><img src="assets/footer-logo.png" alt="Kairon Robot Kids" /></a>
+      <img class="footer-brand" src="assets/footer-logo.png" alt="Kairon Robot Kids">
       <div class="footer-social">
         <strong data-i18n="follow">Follow Kairon!</strong>
         <div>
-          <a href="https://www.youtube.com/@KaironRobotKids" target="_blank" rel="noopener noreferrer" aria-label="YouTube">▶</a>
-          <a href="#" aria-label="Instagram (add your link)">◎</a>
-          <a href="#" aria-label="TikTok (add your link)">♪</a>
+          <a href="https://www.youtube.com/@KaironRobotKids" target="_blank" rel="noopener" aria-label="Kairon Robot Kids on YouTube">▶</a>
         </div>
       </div>
-      <nav class="footer-links" aria-label="Footer navigation">
+      <nav class="footer-links" aria-label="Footer">
         <a href="privacy.html" data-i18n="privacy">Privacy Policy</a>
         <a href="terms.html" data-i18n="terms">Terms of Use</a>
-        <a href="#message" data-i18n="contact">Contact</a>
+        <a href="mailto:xavirisco@gmail.com" data-i18n="contact">Contact</a>
       </nav>
     </div>
-    <p class="copyright">© <span id="year"></span> Kairon Robot Kids. <span data-i18n="rights">All rights reserved.</span></p>
+    <p class="copyright">© <span id="year">2026</span> Kairon Robot Kids. <span data-i18n="rights">All rights reserved.</span></p>
   </footer>
 
   <script src="assets/script.js"></script>
