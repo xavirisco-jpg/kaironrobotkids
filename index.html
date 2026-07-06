@@ -1,31 +1,113 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Kairon Robot Kids</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#10283c" />
+  <meta name="description" content="Kairon Robot Kids — a calm, magical place for little explorers." />
+  <title>Kairon Robot Kids — The Forest Is Waiting</title>
+  <link rel="preload" href="assets/kairon.svg" as="image" type="image/svg+xml" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-<header class="hero">
-<h1>Kairon Robot Kids</h1>
-<p>Learning, imagination and kindness.</p>
-<a class="btn" href="mailto:hello@kaironrobotkids.com?subject=Hello%20Kairon">Send a message to Kairon</a>
-</header>
+  <div class="page-grain" aria-hidden="true"></div>
+  <div class="cursor-glow" aria-hidden="true"></div>
 
-<section class="card">
-<h2>👦 For Kids</h2>
-<p>Welcome! Kairon explores magical worlds, learns new words, meets friendly creatures and shares fun adventures.</p>
-</section>
+  <header class="hero" id="top">
+    <div class="sky" aria-hidden="true">
+      <div class="sun-haze"></div>
+      <div class="cloud cloud-one"></div>
+      <div class="cloud cloud-two"></div>
+      <div class="cloud cloud-three"></div>
+    </div>
+    <div class="forest-layer forest-far" data-depth="0.05" aria-hidden="true"><img src="assets/forest-far.svg" alt="" /></div>
+    <div class="forest-layer forest-mid" data-depth="0.12" aria-hidden="true"><img src="assets/forest-mid.svg" alt="" /></div>
+    <div class="forest-layer forest-front" data-depth="0.22" aria-hidden="true"><img src="assets/forest-front.svg" alt="" /></div>
 
-<section class="card">
-<h2>👨‍👩‍👧 For Parents</h2>
-<p>Kairon Robot Kids creates calm, family-friendly videos designed to encourage curiosity, imagination and early learning.</p>
-</section>
+    <div class="fireflies" aria-hidden="true">
+      <span></span><span></span><span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span><span></span><span></span>
+    </div>
 
-<footer>
-<p>© 2026 Kairon Robot Kids</p>
-</footer>
-<script src="script.js"></script>
+    <div class="hero-copy">
+      <p class="eyebrow"><span></span> Kairon's forest</p>
+      <h1>Somewhere between<br />wonder and <em>home.</em></h1>
+      <p class="hero-lead">A quiet, magical corner for little explorers — where stories, music and kind adventures grow under the trees.</p>
+      <a class="soft-link" href="#welcome"><span>Enter slowly</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v14m0 0 6-6m-6 6-6-6"/></svg></a>
+    </div>
+
+    <div class="kairon-stage" data-depth="0.16">
+      <div class="kairon-aura"></div>
+      <img class="kairon" src="assets/kairon.svg" alt="Kairon, a friendly blue and white robot, standing in a magical forest." />
+      <div class="kairon-shadow" aria-hidden="true"></div>
+    </div>
+    <p class="hero-whisper">Look closely. The forest is listening.</p>
+  </header>
+
+  <main>
+    <section class="welcome scene" id="welcome">
+      <div class="scene-orb orb-left" aria-hidden="true"></div>
+      <div class="scene-inner split">
+        <div class="scene-copy">
+          <p class="kicker">A small hello</p>
+          <h2>Hello, my friend.</h2>
+          <p>Kairon arrived here with a bright little star in his chest and a head full of questions. He never found the answer to every mystery — but he found something better: friends to explore with.</p>
+          <p>This is a place for curiosity without hurry. For music that leaves room to breathe. For gentle stories before a nap, a laugh, or a new adventure.</p>
+        </div>
+        <aside class="message-card" aria-label="A note from Kairon">
+          <div class="card-stars" aria-hidden="true">✦ &nbsp; · &nbsp; ✧</div>
+          <p class="message-label">A note from Kairon</p>
+          <blockquote>“There is always something beautiful waiting in the next clearing.”</blockquote>
+          <div class="signature">— Kairon <span>✦</span></div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="paths scene" id="paths">
+      <div class="scene-inner">
+        <div class="section-heading"><p class="kicker">Choose a path</p><h2>Every visitor finds<br />a different trail.</h2></div>
+        <div class="path-grid">
+          <a class="path-card child-path" href="#adventures"><span class="path-number">01</span><span class="path-icon" aria-hidden="true">✦</span><h3>For little explorers</h3><p>Stories, songs, letters and creatures from the forest.</p><span class="path-arrow" aria-hidden="true">↘</span></a>
+          <a class="path-card parent-path" href="#parents"><span class="path-number">02</span><span class="path-icon" aria-hidden="true">☼</span><h3>For grown-ups</h3><p>A calmer kind of screen time, made with care.</p><span class="path-arrow" aria-hidden="true">↘</span></a>
+          <a class="path-card night-path" href="#message"><span class="path-number">03</span><span class="path-icon" aria-hidden="true">☾</span><h3>Leave a tiny signal</h3><p>Send a message into the forest for Kairon.</p><span class="path-arrow" aria-hidden="true">↘</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="adventures scene" id="adventures">
+      <div class="adventure-sky" aria-hidden="true"></div>
+      <div class="scene-inner adventures-layout">
+        <div class="scene-copy dark-copy">
+          <p class="kicker">The adventures</p>
+          <h2>A new window<br />opens every day.</h2>
+          <p>Tiny discoveries, alphabet magic, friendly monsters and long, peaceful loops for winding down. The forest is always changing — gently.</p>
+          <a class="primary-button channel-link" href="YOUR_YOUTUBE_CHANNEL_URL"><span>Watch Kairon's adventures</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 7 8 5-8 5V7Z"/></svg></a>
+          <p class="tiny-note">Before publishing, replace <strong>YOUR_YOUTUBE_CHANNEL_URL</strong> in <code>index.html</code>.</p>
+        </div>
+        <div class="video-window" aria-label="A window into Kairon's adventures">
+          <div class="window-frame"><div class="window-sun"></div><div class="window-hill hill-one"></div><div class="window-hill hill-two"></div><div class="window-tree tree-one"></div><div class="window-tree tree-two"></div><div class="window-kairon">✦</div><p>New adventures<br />are growing here.</p></div>
+          <div class="window-caption">Kairon's signal is on.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="parents scene" id="parents">
+      <div class="scene-inner split parents-layout">
+        <div class="parent-illustration" aria-hidden="true"><div class="paper-sun"></div><div class="paper-tree tree-a"></div><div class="paper-tree tree-b"></div><div class="paper-tree tree-c"></div><div class="paper-kairon">✦</div><div class="paper-ground"></div></div>
+        <div class="scene-copy"><p class="kicker">For parents</p><h2>Less noise.<br />More room to imagine.</h2><p>Kairon is being built as a gentle universe: warm visuals, simple language and stories that invite children to look, listen and wonder — rather than rush from one loud thing to another.</p><p>The world is still growing. The intention stays simple: make a corner of the internet that feels safe, beautiful and a little bit magical.</p></div>
+      </div>
+    </section>
+
+    <section class="message scene" id="message">
+      <div class="message-glow" aria-hidden="true"></div>
+      <div class="scene-inner message-layout">
+        <div class="scene-copy dark-copy"><p class="kicker">A message for Kairon</p><h2>Leave a little light<br />in the forest.</h2><p>The forest mailbox is still being built. For now, leave your note here and the signal will stay safely on this page.</p></div>
+        <form class="forest-form" id="forest-form"><label>Your name<input type="text" name="name" autocomplete="name" placeholder="A name for the message" /></label><label>Your message<textarea name="message" rows="4" placeholder="Hello, Kairon..."></textarea></label><button type="submit" class="primary-button"><span>Send a tiny signal</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6"/></svg></button><p class="form-status" aria-live="polite"></p></form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer"><a class="footer-mark" href="#top" aria-label="Back to the top">Kairon <span>✦</span></a><p>Made slowly, somewhere in the forest.</p><p class="footer-small">© <span id="year"></span> Kairon Robot Kids</p></footer>
+  <script src="script.js"></script>
 </body>
 </html>
