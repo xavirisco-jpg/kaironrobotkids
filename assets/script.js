@@ -1,11 +1,10 @@
-/* Kairon Robot Kids — script.js background-hero test v4
-   Uses assets/hero-forest.jpg as full hero image and hides the old separate Kairon overlay.
-   v4 fixes the background image path.
+/* Kairon Robot Kids — script.js with Formspree
+   Keeps the clean integrated hero background and enables real form sending.
 */
 
 (function () {
   const backgroundHeroPatch = document.createElement('style');
-  backgroundHeroPatch.setAttribute('data-kairon-patch', 'background-hero-test-v4');
+  backgroundHeroPatch.setAttribute('data-kairon-patch', 'background-hero-final');
 
   backgroundHeroPatch.textContent = `
     .hero{
@@ -92,7 +91,10 @@ const translations = {
     rights: 'All rights reserved.',
     formMissing: 'Please complete your name, email and message.',
     formEmail: 'Please enter a valid email address.',
-    formReady: 'Your email app is opening — thank you for writing to Kairon!'
+    formUnsafe: 'Please remove links, code or unusual hidden characters from the message.',
+    formSending: 'Sending your message...',
+    formSuccess: 'Message sent. Kairon will read it soon!',
+    formFail: 'Could not send the message. Please try again in a moment.'
   },
   es: {
     welcome: 'Bienvenido al',
@@ -121,7 +123,10 @@ const translations = {
     rights: 'Todos los derechos reservados.',
     formMissing: 'Completa tu nombre, email y mensaje.',
     formEmail: 'Escribe un email válido.',
-    formReady: 'Se está abriendo tu aplicación de correo. ¡Gracias por escribir a Kairon!'
+    formUnsafe: 'Quita enlaces, código o caracteres invisibles raros del mensaje.',
+    formSending: 'Enviando mensaje...',
+    formSuccess: 'Mensaje enviado. ¡Kairon lo leerá pronto!',
+    formFail: 'No se ha podido enviar. Prueba otra vez en un momento.'
   }
 };
 
@@ -159,33 +164,94 @@ document.querySelectorAll('.lang').forEach((button) => {
   button.addEventListener('click', () => setLanguage(button.dataset.lang));
 });
 
-const INBOX_ADDRESS = 'xavirisco@gmail.com';
+const FORM_ENDPOINT = 'https://formspree.io/f/xnjkkpoy';
+
 const form = document.getElementById('contact-form');
 const formStatus = document.getElementById('form-status');
 
+const safetyRules = {
+  name: /^[a-zA-ZÀ-ÿ0-9 .,'-]{2,40}$/,
+  email: /^[^\s@<>]+@[^\s@<>]+\.[^\s@<>]{2,}$/,
+  blockedContent: /(<[^>]*>|https?:\/\/|www\.|javascript:|data:|mailto:|tel:|bit\.ly|tinyurl|t\.co|discord\.gg|\.ru\b|\.zip\b|\.mov\b)/i,
+  hiddenChars: /[\u0000-\u001F\u007F-\u009F\u200B-\u200F\u202A-\u202E]/
+};
+
+function cleanText(text) {
+  return String(text || '')
+    .replace(/[\u0000-\u001F\u007F-\u009F\u200B-\u200F\u202A-\u202E]/g, '')
+    .replace(/[<>]/g, '')
+    .trim();
+}
+
+function isSafeMessage(text) {
+  if (!text || text.length < 3 || text.length > 900) return false;
+  if (safetyRules.blockedContent.test(text)) return false;
+  if (safetyRules.hiddenChars.test(text)) return false;
+  return true;
+}
+
 if (form && formStatus) {
-  form.addEventListener('submit', (event) => {
+  form.addEventListener('submit', async (event) => {
     event.preventDefault();
 
-    const name = document.getElementById('contact-name').value.trim();
-    const email = document.getElementById('contact-email').value.trim();
-    const message = document.getElementById('contact-message').value.trim();
+    const submitButton = form.querySelector('button[type="submit"]');
+    const name = cleanText(document.getElementById('contact-name').value);
+    const email = cleanText(document.getElementById('contact-email').value);
+    const message = cleanText(document.getElementById('contact-message').value);
 
     if (!name || !email || !message) {
       formStatus.textContent = translations[language].formMissing;
       return;
     }
 
-    if (!/^\S+@\S+\.\S+$/.test(email)) {
+    if (!safetyRules.name.test(name)) {
+      formStatus.textContent = language === 'es'
+        ? 'El nombre contiene caracteres no válidos.'
+        : 'The name contains invalid characters.';
+      return;
+    }
+
+    if (!safetyRules.email.test(email)) {
       formStatus.textContent = translations[language].formEmail;
       return;
     }
 
-    const subject = encodeURIComponent(`Message for Kairon from ${name}`);
-    const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
+    if (!isSafeMessage(message)) {
+      formStatus.textContent = translations[language].formUnsafe;
+      return;
+    }
 
-    window.location.href = `mailto:${INBOX_ADDRESS}?subject=${subject}&body=${body}`;
-    formStatus.textContent = translations[language].formReady;
+    const payload = {
+      name,
+      email,
+      message,
+      source: 'kaironrobotkids.com',
+      _subject: `Message for Kairon from ${name}`,
+      _replyto: email
+    };
+
+    try {
+      formStatus.textContent = translations[language].formSending;
+      if (submitButton) submitButton.disabled = true;
+
+      const response = await fetch(FORM_ENDPOINT, {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(payload)
+      });
+
+      if (!response.ok) throw new Error('Formspree submission failed');
+
+      form.reset();
+      formStatus.textContent = translations[language].formSuccess;
+    } catch (error) {
+      formStatus.textContent = translations[language].formFail;
+    } finally {
+      if (submitButton) submitButton.disabled = false;
+    }
   });
 }
 
