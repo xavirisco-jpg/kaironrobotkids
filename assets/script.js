@@ -1,58 +1,82 @@
-/* Kairon Robot Kids — script.js
-   Step 1 patch: adjusts the hero Kairon placement without touching styles.css.
+/* Kairon Robot Kids — clean script.js
+   Fixes language switching, contact form and applies a visible hero robot placement patch.
 */
 
-const heroRobotPatch = document.createElement('style');
-heroRobotPatch.textContent = `
-  .hero-character{
-    position:relative;
-    min-height:690px;
-    overflow:visible;
-    pointer-events:none;
-  }
+(function () {
+  const heroRobotPatch = document.createElement('style');
+  heroRobotPatch.setAttribute('data-kairon-patch', 'hero-robot-v2');
 
-  .hero-character img{
-    position:absolute;
-    right:-3%;
-    bottom:-8px;
-    display:block;
-    width:auto;
-    height:clamp(620px,46vw,735px);
-    filter:drop-shadow(0 26px 24px rgba(3,61,151,.28));
-  }
-
-  @media(max-width:1180px){
-    .hero-character img{
-      right:-7%;
-      height:clamp(585px,48vw,690px);
+  heroRobotPatch.textContent = `
+    .hero-content{
+      min-height:690px;
     }
-  }
 
-  @media(max-width:850px){
     .hero-character{
-      min-height:535px;
-      margin-top:-22px;
+      position:relative;
+      min-height:715px;
+      overflow:visible;
+      pointer-events:none;
     }
 
     .hero-character img{
-      right:50%;
-      bottom:-10px;
-      height:535px;
-      transform:translateX(50%);
-    }
-  }
-
-  @media(max-width:430px){
-    .hero-character{
-      min-height:425px;
+      position:absolute;
+      right:-10%;
+      bottom:-26px;
+      display:block;
+      width:auto;
+      height:clamp(690px,52vw,820px);
+      z-index:2;
+      filter:drop-shadow(0 30px 28px rgba(3,61,151,.30));
     }
 
-    .hero-character img{
-      height:438px;
+    @media(max-width:1180px){
+      .hero-content{
+        grid-template-columns:50% 50%;
+      }
+
+      .hero-character{
+        min-height:670px;
+      }
+
+      .hero-character img{
+        right:-16%;
+        bottom:-22px;
+        height:clamp(620px,55vw,750px);
+      }
     }
-  }
-`;
-document.head.appendChild(heroRobotPatch);
+
+    @media(max-width:850px){
+      .hero-content{
+        grid-template-columns:1fr;
+        min-height:0;
+      }
+
+      .hero-character{
+        min-height:525px;
+        margin-top:-24px;
+      }
+
+      .hero-character img{
+        right:50%;
+        bottom:-12px;
+        height:535px;
+        transform:translateX(50%);
+      }
+    }
+
+    @media(max-width:430px){
+      .hero-character{
+        min-height:420px;
+      }
+
+      .hero-character img{
+        height:438px;
+      }
+    }
+  `;
+
+  document.head.appendChild(heroRobotPatch);
+})();
 
 const translations = {
   en: {
@@ -62,7 +86,7 @@ const translations = {
     adventure: 'New adventures await!',
     watchYoutube: 'Watch on YouTube',
     kidsTitle: 'For Kids',
-    kidsText: 'Join Kairon on exciting adventures. Meet dragons, trolls, dinosaurs, unicorns and many magical friends. Learn, play and explore together!',
+    kidsText: 'Join Kairon on exciting adventures. Meet dragons, trolls, dinosaurs, unicorns and many magical friends.<br>Learn, play and explore together!',
     parentsTitle: 'For Parents',
     parentsText: 'Safe AI-generated stories and relaxing videos designed to encourage curiosity, imagination and calm moments together.',
     messageTitle: 'Send a Message<br>to Kairon',
@@ -71,10 +95,10 @@ const translations = {
     emailPlaceholder: 'Your email',
     messagePlaceholder: 'Your message...',
     send: 'Send Message',
-    value1: 'Safe &amp; Family<br>Friendly',
+    value1: 'Safe & Family<br>Friendly',
     value2: 'Made with Love<br>and Imagination',
-    value3: 'Educational &amp;<br>Entertaining',
-    value4: 'Relaxing &amp;<br>Calming',
+    value3: 'Educational &<br>Entertaining',
+    value4: 'Relaxing &<br>Calming',
     follow: 'Follow Kairon!',
     privacy: 'Privacy Policy',
     terms: 'Terms of Use',
@@ -91,7 +115,7 @@ const translations = {
     adventure: '¡Nuevas aventuras te esperan!',
     watchYoutube: 'Ver en YouTube',
     kidsTitle: 'Para peques',
-    kidsText: 'Acompaña a Kairon en aventuras emocionantes. Conoce dragones, trolls, dinosaurios, unicornios y muchos amigos mágicos. ¡Aprende, juega y explora!',
+    kidsText: 'Acompaña a Kairon en aventuras emocionantes. Conoce dragones, trolls, dinosaurios, unicornios y muchos amigos mágicos.<br>¡Aprende, juega y explora!',
     parentsTitle: 'Para familias',
     parentsText: 'Historias generadas con IA y vídeos relajantes pensados para despertar curiosidad, imaginación y momentos tranquilos en familia.',
     messageTitle: 'Envía un mensaje<br>a Kairon',
