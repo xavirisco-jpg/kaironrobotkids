@@ -1,3 +1,59 @@
+/* Kairon Robot Kids — script.js
+   Step 1 patch: adjusts the hero Kairon placement without touching styles.css.
+*/
+
+const heroRobotPatch = document.createElement('style');
+heroRobotPatch.textContent = `
+  .hero-character{
+    position:relative;
+    min-height:690px;
+    overflow:visible;
+    pointer-events:none;
+  }
+
+  .hero-character img{
+    position:absolute;
+    right:-3%;
+    bottom:-8px;
+    display:block;
+    width:auto;
+    height:clamp(620px,46vw,735px);
+    filter:drop-shadow(0 26px 24px rgba(3,61,151,.28));
+  }
+
+  @media(max-width:1180px){
+    .hero-character img{
+      right:-7%;
+      height:clamp(585px,48vw,690px);
+    }
+  }
+
+  @media(max-width:850px){
+    .hero-character{
+      min-height:535px;
+      margin-top:-22px;
+    }
+
+    .hero-character img{
+      right:50%;
+      bottom:-10px;
+      height:535px;
+      transform:translateX(50%);
+    }
+  }
+
+  @media(max-width:430px){
+    .hero-character{
+      min-height:425px;
+    }
+
+    .hero-character img{
+      height:438px;
+    }
+  }
+`;
+document.head.appendChild(heroRobotPatch);
+
 const translations = {
   en: {
     welcome: 'Welcome to the',
@@ -117,6 +173,7 @@ if (form && formStatus) {
 
     const subject = encodeURIComponent(`Message for Kairon from ${name}`);
     const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
+
     window.location.href = `mailto:${INBOX_ADDRESS}?subject=${subject}&body=${body}`;
     formStatus.textContent = translations[language].formReady;
   });
