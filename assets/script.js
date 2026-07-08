@@ -1,18 +1,20 @@
-/* Kairon Robot Kids — script.js background-hero test
-   This version uses hero-forest.jpg as the full hero image and hides the old separate Kairon overlay.
+/* Kairon Robot Kids — script.js background-hero test v4
+   Uses assets/hero-forest.jpg as full hero image and hides the old separate Kairon overlay.
+   v4 fixes the background image path.
 */
 
 (function () {
   const backgroundHeroPatch = document.createElement('style');
-  backgroundHeroPatch.setAttribute('data-kairon-patch', 'background-hero-test');
+  backgroundHeroPatch.setAttribute('data-kairon-patch', 'background-hero-test-v4');
 
   backgroundHeroPatch.textContent = `
     .hero{
       background-image:
         linear-gradient(90deg, rgba(255,255,255,.40) 0%, rgba(255,255,255,.20) 34%, rgba(255,255,255,.00) 62%),
-        url("hero-forest.jpg") !important;
+        url("assets/hero-forest.jpg") !important;
       background-size:cover !important;
       background-position:center center !important;
+      background-repeat:no-repeat !important;
     }
 
     .hero-content{
@@ -37,8 +39,8 @@
     @media(max-width:850px){
       .hero{
         background-image:
-          linear-gradient(180deg, rgba(255,255,255,.58) 0%, rgba(255,255,255,.35) 42%, rgba(255,255,255,.08) 100%),
-          url("hero-forest.jpg") !important;
+          linear-gradient(180deg, rgba(255,255,255,.62) 0%, rgba(255,255,255,.38) 42%, rgba(255,255,255,.10) 100%),
+          url("assets/hero-forest.jpg") !important;
         background-position:62% center !important;
       }
 
