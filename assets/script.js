@@ -63,6 +63,114 @@
   document.head.appendChild(backgroundHeroPatch);
 })();
 
+
+(function () {
+  const magicalTextPatch = document.createElement('style');
+  magicalTextPatch.setAttribute('data-kairon-patch', 'magical-hero-text');
+
+  magicalTextPatch.textContent = `
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:8px 18px;
+      border-radius:999px;
+      background:rgba(255,255,255,.46);
+      box-shadow:
+        0 10px 24px rgba(2,70,160,.12),
+        inset 0 0 18px rgba(255,255,255,.72);
+      backdrop-filter:blur(5px);
+      color:#0750c9;
+      text-shadow:0 2px 0 rgba(255,255,255,.75);
+    }
+
+    .spark{
+      filter:
+        drop-shadow(0 0 5px rgba(255,215,67,.85))
+        drop-shadow(0 3px 4px rgba(185,111,0,.18));
+      transform:translateY(-1px);
+    }
+
+    .hero-title{
+      letter-spacing:-.045em;
+      line-height:.84;
+      color:#0a49df;
+      text-shadow:
+        0 3px 0 rgba(255,255,255,.92),
+        0 8px 15px rgba(2,53,151,.18),
+        0 0 24px rgba(99,186,255,.28);
+      -webkit-text-stroke:1.5px rgba(255,255,255,.62);
+      position:relative;
+    }
+
+    .hero-title strong{
+      color:#0746dc;
+      text-shadow:
+        0 3px 0 rgba(255,255,255,.95),
+        0 9px 18px rgba(2,53,151,.22),
+        0 0 22px rgba(255,225,86,.34);
+    }
+
+    .hero-title::after{
+      content:"";
+      position:absolute;
+      left:-10px;
+      top:-12px;
+      width:88%;
+      height:115%;
+      background:
+        radial-gradient(circle at 18% 18%, rgba(255,230,92,.55) 0 2px, transparent 3px),
+        radial-gradient(circle at 72% 12%, rgba(255,255,255,.88) 0 2px, transparent 3px),
+        radial-gradient(circle at 55% 72%, rgba(92,197,255,.55) 0 2px, transparent 3px);
+      pointer-events:none;
+      opacity:.75;
+      filter:drop-shadow(0 0 5px rgba(255,230,92,.45));
+    }
+
+    .hero-description{
+      max-width:390px;
+      padding:12px 16px;
+      border-radius:22px;
+      background:rgba(255,255,255,.34);
+      box-shadow:inset 0 0 20px rgba(255,255,255,.44);
+      backdrop-filter:blur(4px);
+      color:#062b73;
+      text-shadow:0 1px 0 rgba(255,255,255,.65);
+    }
+
+    .adventure{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      margin-top:10px;
+      padding:7px 14px;
+      border-radius:999px;
+      background:rgba(255,246,179,.38);
+      box-shadow:
+        0 8px 18px rgba(255,180,35,.12),
+        inset 0 0 16px rgba(255,255,255,.48);
+      color:#0750c9;
+      text-shadow:0 1px 0 rgba(255,255,255,.7);
+    }
+
+    .hero-copy{
+      filter:drop-shadow(0 10px 18px rgba(255,255,255,.16));
+    }
+
+    @media(max-width:850px){
+      .hero-title{
+        -webkit-text-stroke:1px rgba(255,255,255,.62);
+      }
+
+      .hero-description{
+        max-width:100%;
+      }
+    }
+  `;
+
+  document.head.appendChild(magicalTextPatch);
+})();
+
 const translations = {
   en: {
     welcome: 'Welcome to the',
