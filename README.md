@@ -3,7 +3,7 @@
 This is a static GitHub Pages website: no build tools, no installs, no nonsense.
 
 ## Put it live on GitHub Pages
-
+Updated analytics deployment test.
 1. Download and unzip this project.
 2. In the GitHub repository, delete the old web files (not the `.git` folder if you are using Git locally).
 3. Upload the contents of this folder: `index.html`, `privacy.html`, `terms.html`, and the whole `assets` folder.
