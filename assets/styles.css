@@ -488,3 +488,109 @@ h1 strong,
     margin-top: 8px !important;
   }
 }
+
+
+/* =========================================================
+   Kairon Robot Kids — CLEAN LOGO + ALIGNMENT PATCH
+   Upload BOTH files to /assets:
+   - styles.css
+   - kairon-hero-logo.png
+   This final override tightens the hero logo between the eyebrow
+   and the description, and uses the cleaned transparent logo asset.
+   ========================================================= */
+
+.hero-copy {
+  max-width: 690px !important;
+  padding-left: 72px !important;
+  transform: translateY(-32px) !important;
+}
+
+.eyebrow {
+  margin-left: 8px !important;
+  margin-bottom: 8px !important;
+}
+
+h1,
+.hero-title {
+  width: min(590px, 45vw) !important;
+  max-width: 590px !important;
+  aspect-ratio: 900 / 539 !important;
+  margin: -4px 0 0 -8px !important;
+  background: url("kairon-hero-logo.png") center center / contain no-repeat !important;
+  filter: drop-shadow(0 12px 18px rgba(1, 47, 140, 0.16)) !important;
+}
+
+.hero-description {
+  max-width: 405px !important;
+  margin: 4px 0 8px 36px !important;
+  padding: 12px 16px !important;
+  font-size: 19px !important;
+}
+
+.adventure-note,
+.adventure {
+  margin-left: 36px !important;
+}
+
+.youtube-button {
+  margin-top: 15px !important;
+  margin-left: 0 !important;
+}
+
+@media (max-width: 1180px) {
+  .hero-copy {
+    padding-left: 38px !important;
+  }
+
+  h1,
+  .hero-title {
+    width: min(550px, 46vw) !important;
+    max-width: 550px !important;
+    margin-left: -6px !important;
+  }
+}
+
+@media (max-width: 850px) {
+  .hero-copy {
+    max-width: none !important;
+    padding: 22px 12px 0 !important;
+    transform: none !important;
+    text-align: center !important;
+  }
+
+  .eyebrow {
+    margin-left: 0 !important;
+    margin-bottom: 8px !important;
+  }
+
+  h1,
+  .hero-title {
+    width: min(92vw, 590px) !important;
+    max-width: 590px !important;
+    margin: -2px auto 0 !important;
+  }
+
+  .hero-description {
+    margin: 5px auto 10px !important;
+    max-width: 370px !important;
+    font-size: 18px !important;
+  }
+
+  .adventure-note,
+  .adventure {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}
+
+@media (max-width: 430px) {
+  h1,
+  .hero-title {
+    width: 94vw !important;
+    margin-top: 0 !important;
+  }
+
+  .hero-description {
+    margin-top: 4px !important;
+  }
+}
