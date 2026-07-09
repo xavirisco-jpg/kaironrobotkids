@@ -707,3 +707,132 @@ h1,
     margin-top: -2px !important;
   }
 }
+
+/* =========================================================
+   Kairon Robot Kids — FINAL HOME LOCK PATCH
+   Removes the small welcome badge, shifts the logo slightly left,
+   centers the text/CTA group, and turns the YouTube CTA red.
+   ========================================================= */
+
+.hero-copy {
+  max-width: 720px !important;
+  padding-left: 48px !important;
+  transform: translateY(-28px) !important;
+}
+
+.eyebrow {
+  display: none !important;
+}
+
+h1,
+.hero-title {
+  width: min(610px, 46vw) !important;
+  max-width: 610px !important;
+  aspect-ratio: 885 / 512 !important;
+  margin: 0 0 0 -36px !important;
+  background: url("kairon-hero-logo.png") center center / contain no-repeat !important;
+  filter: drop-shadow(0 10px 15px rgba(1, 47, 140, 0.13)) !important;
+}
+
+.hero-description {
+  max-width: 405px !important;
+  margin: 2px 0 8px 66px !important;
+  padding: 12px 16px !important;
+  font-size: 19px !important;
+}
+
+.adventure-note,
+.adventure {
+  margin-left: 66px !important;
+}
+
+.youtube-button {
+  margin-top: 16px !important;
+  margin-left: 104px !important;
+  border: 2px solid rgba(255, 255, 255, 0.98) !important;
+  background: linear-gradient(180deg, #ff3131 0%, #ff0000 45%, #c90000 100%) !important;
+  box-shadow:
+    0 10px 0 #920000,
+    0 14px 22px rgba(160, 0, 0, 0.22) !important;
+}
+
+.youtube-button:hover,
+.youtube-button:focus-visible {
+  transform: translateY(-2px) !important;
+  box-shadow:
+    0 12px 0 #920000,
+    0 16px 24px rgba(160, 0, 0, 0.25) !important;
+}
+
+.play-icon {
+  color: #ff0000 !important;
+  background: #fff !important;
+}
+
+@media (max-width: 1180px) {
+  .hero-copy {
+    padding-left: 30px !important;
+  }
+
+  h1,
+  .hero-title {
+    width: min(570px, 47vw) !important;
+    max-width: 570px !important;
+    margin-left: -28px !important;
+  }
+
+  .hero-description,
+  .adventure-note,
+  .adventure {
+    margin-left: 54px !important;
+  }
+
+  .youtube-button {
+    margin-left: 88px !important;
+  }
+}
+
+@media (max-width: 850px) {
+  .hero-copy {
+    max-width: none !important;
+    padding: 22px 12px 0 !important;
+    transform: none !important;
+    text-align: center !important;
+  }
+
+  .eyebrow {
+    display: none !important;
+  }
+
+  h1,
+  .hero-title {
+    width: min(92vw, 610px) !important;
+    max-width: 610px !important;
+    margin: 0 auto !important;
+  }
+
+  .hero-description {
+    margin: 2px auto 10px !important;
+    max-width: 370px !important;
+    font-size: 18px !important;
+  }
+
+  .adventure-note,
+  .adventure,
+  .youtube-button {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}
+
+@media (max-width: 430px) {
+  h1,
+  .hero-title {
+    width: 94vw !important;
+    margin-top: 0 !important;
+  }
+
+  .hero-description {
+    margin-top: 0 !important;
+  }
+}
