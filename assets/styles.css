@@ -1380,3 +1380,138 @@ body {
     height: 47px !important;
   }
 }
+/* =========================================================
+   FONDO CARTOON + TRANSICIÓN + SEPARACIÓN TARJETAS
+   ========================================================= */
+
+.content-section {
+  position: relative !important;
+
+  /* eliminamos el solapamiento antiguo con el hero */
+  margin-top: 0 !important;
+
+  /* aprox. 7 mm de aire antes de las tarjetas */
+  padding-top: 26px !important;
+  padding-bottom: 30px !important;
+
+  overflow: visible !important;
+  isolation: isolate !important;
+
+  background:
+    radial-gradient(
+      ellipse at 95% 18%,
+      rgba(255, 226, 120, .42) 0 170px,
+      transparent 430px
+    ),
+
+    radial-gradient(
+      ellipse at 5% 48%,
+      rgba(135, 220, 190, .32) 0 190px,
+      transparent 450px
+    ),
+
+    radial-gradient(
+      ellipse at 94% 70%,
+      rgba(220, 170, 255, .28) 0 190px,
+      transparent 450px
+    ),
+
+    linear-gradient(
+      180deg,
+      #d5efff 0%,
+      #eaf8ff 28%,
+      #dcf3ff 55%,
+      #edf8ff 78%,
+      #d8efff 100%
+    ) !important;
+}
+
+
+/* =========================================================
+   TRANSICIÓN BOSQUE → CIELO
+   Se mete ligeramente encima del final del hero
+   ========================================================= */
+
+.content-section::after {
+  content: "" !important;
+
+  position: absolute !important;
+
+  top: -72px !important;
+  left: 0 !important;
+  right: 0 !important;
+
+  height: 105px !important;
+
+  z-index: 0 !important;
+  pointer-events: none !important;
+
+  background: linear-gradient(
+    180deg,
+    rgba(213, 239, 255, 0) 0%,
+    rgba(213, 239, 255, .18) 22%,
+    rgba(213, 239, 255, .48) 52%,
+    rgba(213, 239, 255, .82) 78%,
+    #d5efff 100%
+  ) !important;
+}
+
+
+/* =========================================================
+   DIBUJOS CARTOON PASTEL DE FONDO
+   estrellas + huevos + frutas
+   ========================================================= */
+
+.content-section::before {
+  content: "" !important;
+
+  position: absolute !important;
+  inset: 15px 0 0 0 !important;
+
+  z-index: 0 !important;
+  pointer-events: none !important;
+
+  opacity: .42 !important;
+
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='620' height='420' viewBox='0 0 620 420'%3E%3Cg opacity='.72'%3E%3Cpolygon points='70,18 84,55 124,55 92,78 104,116 70,93 36,116 48,78 16,55 56,55' fill='%23ffe48a'/%3E%3Cellipse cx='320' cy='78' rx='44' ry='56' fill='%23fff3c4' stroke='%23f5c46c' stroke-width='6'/%3E%3Ccircle cx='528' cy='122' r='46' fill='%23ffc17a'/%3E%3Cpath d='M515 78 Q528 56 548 72 Q533 79 521 89Z' fill='%237fd9a8'/%3E%3Cpath d='M112 286 C92 252 122 224 160 236 C198 224 228 252 208 286 C190 320 160 342 160 342 C160 342 130 320 112 286Z' fill='%23ff9fb6'/%3E%3Cpath d='M128 238 Q160 210 192 238 Q160 246 128 238Z' fill='%237fd9a8'/%3E%3Cpolygon points='470,270 483,304 520,304 490,326 501,362 470,340 439,362 450,326 420,304 457,304' fill='%23d7b5ff'/%3E%3C/g%3E%3C/svg%3E") !important;
+
+  background-size: 620px 420px !important;
+  background-repeat: repeat !important;
+  background-position: 20px 30px !important;
+}
+
+
+/* El contenido real siempre por encima de los dibujos */
+.content-section > .wrap {
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+
+/* Tarjetas con separación clara respecto al hero */
+.cards {
+  margin-top: 0 !important;
+}
+
+
+/* =========================================================
+   MÓVIL
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+  .content-section {
+    padding-top: 22px !important;
+  }
+
+  .content-section::after {
+    top: -55px !important;
+    height: 82px !important;
+  }
+
+  .content-section::before {
+    opacity: .30 !important;
+    background-size: 470px 320px !important;
+  }
+}
