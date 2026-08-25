@@ -1539,3 +1539,155 @@ body {
     margin-top: -18px !important;
   }
 }
+/* =========================================================
+   REMATE FINAL V1
+   Fondo limpio antes del footer + footer más fino
+   ========================================================= */
+
+
+/* Los dibujos desaparecen suavemente antes del pie */
+.content-section::before {
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    #000 0%,
+    #000 82%,
+    rgba(0,0,0,.75) 89%,
+    rgba(0,0,0,.25) 95%,
+    transparent 100%
+  ) !important;
+
+  mask-image: linear-gradient(
+    to bottom,
+    #000 0%,
+    #000 82%,
+    rgba(0,0,0,.75) 89%,
+    rgba(0,0,0,.25) 95%,
+    transparent 100%
+  ) !important;
+}
+
+
+/* =========================================================
+   FOOTER ULTRACOMPACTO
+   ========================================================= */
+
+.site-footer {
+  position: relative !important;
+  z-index: 10 !important;
+
+  min-height: 0 !important;
+  padding: 7px 0 5px !important;
+
+  color: #fff !important;
+  background: linear-gradient(
+    180deg,
+    #1552ce 0%,
+    #07318e 100%
+  ) !important;
+}
+
+
+/* absolutamente nada decorativo dentro del pie */
+.site-footer::before,
+.site-footer::after,
+.footer-stars,
+.footer-brand {
+  display: none !important;
+}
+
+
+/* fila única */
+.footer-row {
+  display: grid !important;
+  grid-template-columns: auto 1fr !important;
+
+  align-items: center !important;
+
+  min-height: 28px !important;
+  gap: 20px !important;
+}
+
+
+/* YouTube */
+.footer-social {
+  padding: 0 !important;
+  margin: 0 !important;
+  border: 0 !important;
+}
+
+.footer-social strong {
+  display: none !important;
+}
+
+.footer-social div {
+  display: flex !important;
+  align-items: center !important;
+}
+
+.footer-social a {
+  display: grid !important;
+
+  width: 26px !important;
+  height: 26px !important;
+
+  place-items: center !important;
+
+  border-radius: 6px !important;
+
+  color: #ef1727 !important;
+  background: #fff !important;
+
+  font-size: 14px !important;
+}
+
+
+/* enlaces */
+.footer-links {
+  display: flex !important;
+
+  justify-content: flex-end !important;
+  align-items: center !important;
+
+  gap: 17px !important;
+
+  font-size: 11px !important;
+  line-height: 1 !important;
+  font-weight: 800 !important;
+}
+
+
+/* copyright mínimo */
+.copyright {
+  margin: 3px 0 0 !important;
+
+  color: rgba(255,255,255,.68) !important;
+
+  font-size: 9px !important;
+  line-height: 1.1 !important;
+  text-align: center !important;
+}
+
+
+/* móvil */
+@media (max-width: 650px) {
+
+  .site-footer {
+    padding: 8px 0 6px !important;
+  }
+
+  .footer-row {
+    grid-template-columns: auto 1fr !important;
+    gap: 12px !important;
+  }
+
+  .footer-links {
+    justify-content: flex-end !important;
+    gap: 10px !important;
+
+    font-size: 10px !important;
+  }
+
+  .copyright {
+    font-size: 8px !important;
+  }
+}
