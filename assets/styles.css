@@ -943,3 +943,40 @@ h1,
     right: 18px !important;
   }
 }
+/* DESCRIPCIÓN BAJO EL LOGO - ajuste final */
+.hero-description {
+  width: 430px !important;
+  max-width: 430px !important;
+  box-sizing: border-box !important;
+
+  margin: 4px 0 10px 66px !important;
+  padding: 13px 18px !important;
+
+  color: #12336d !important;
+  font-size: 18px !important;
+  line-height: 1.38 !important;
+  font-weight: 800 !important;
+
+  background: rgba(255, 255, 255, 0.38) !important;
+  border: 1px solid rgba(255, 255, 255, 0.55) !important;
+  border-radius: 18px !important;
+
+  backdrop-filter: blur(6px) !important;
+  -webkit-backdrop-filter: blur(6px) !important;
+
+  box-shadow:
+    0 8px 22px rgba(12, 54, 125, 0.10),
+    inset 0 1px 0 rgba(255, 255, 255, 0.55) !important;
+
+  text-shadow: 0 1px 3px rgba(255, 255, 255, 0.75) !important;
+}
+
+@media (max-width: 850px) {
+  .hero-description {
+    width: min(390px, 88vw) !important;
+    max-width: min(390px, 88vw) !important;
+    margin: 4px auto 10px !important;
+    padding: 12px 16px !important;
+    font-size: 17px !important;
+  }
+}
