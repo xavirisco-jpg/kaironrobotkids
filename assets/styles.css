@@ -1049,3 +1049,131 @@ h1,
     margin-right: auto !important;
   }
 }
+/* =========================================================
+   FOOTER COMPACTO V1 - LIMPIO
+   ========================================================= */
+
+.site-footer {
+  position: relative !important;
+  overflow: hidden !important;
+
+  padding: 14px 0 10px !important;
+  min-height: 0 !important;
+
+  background: linear-gradient(180deg, #1450ce, #082b8f) !important;
+}
+
+/* Quitamos decoraciones */
+.site-footer::before {
+  display: none !important;
+}
+
+.footer-stars {
+  display: none !important;
+}
+
+/* Quitamos logo del footer */
+.footer-brand {
+  display: none !important;
+}
+
+/* Fila principal */
+.footer-row {
+  display: grid !important;
+  grid-template-columns: auto 1fr !important;
+  align-items: center !important;
+
+  gap: 24px !important;
+  min-height: 0 !important;
+}
+
+/* Bloque social */
+.footer-social {
+  padding: 0 !important;
+  border-left: 0 !important;
+}
+
+/* Quitamos "Follow Kairon!" */
+.footer-social strong {
+  display: none !important;
+}
+
+.footer-social div {
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+}
+
+/* Botón YouTube */
+.footer-social a {
+  display: grid !important;
+  width: 30px !important;
+  height: 30px !important;
+  place-items: center !important;
+
+  border-radius: 8px !important;
+
+  color: #ef1727 !important;
+  background: #fff !important;
+
+  font-size: 17px !important;
+  font-weight: 900 !important;
+}
+
+/* Enlaces legales/contacto */
+.footer-links {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-end !important;
+
+  gap: 18px !important;
+
+  font-size: 13px !important;
+  font-weight: 800 !important;
+}
+
+.footer-links a {
+  white-space: nowrap !important;
+}
+
+.footer-links a:hover,
+.footer-links a:focus-visible {
+  text-decoration: underline !important;
+}
+
+/* Copyright */
+.copyright {
+  margin: 8px 0 0 !important;
+
+  color: rgba(255,255,255,.72) !important;
+  text-align: center !important;
+
+  font-size: 11px !important;
+  line-height: 1.2 !important;
+}
+
+/* Móvil */
+@media (max-width: 650px) {
+
+  .site-footer {
+    padding: 12px 0 10px !important;
+  }
+
+  .footer-row {
+    grid-template-columns: 1fr !important;
+    justify-items: center !important;
+
+    gap: 10px !important;
+  }
+
+  .footer-links {
+    justify-content: center !important;
+    flex-wrap: wrap !important;
+
+    gap: 8px 14px !important;
+  }
+
+  .copyright {
+    margin-top: 8px !important;
+  }
+}
