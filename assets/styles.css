@@ -980,14 +980,15 @@ h1,
     font-size: 17px !important;
   }
 }
-/* HERO DESCRIPTION - banda limpia */
-.hero-description {
-  width: 520px !important;
-  max-width: 520px !important;
-  min-width: 520px !important;
+/* HERO TEXT BLOCK - descripción + adventures */
 
-  margin: 8px 0 12px 66px !important;
-  padding: 11px 20px !important;
+.hero-description {
+  width: 410px !important;
+  max-width: 410px !important;
+  min-width: 0 !important;
+
+  margin: 6px 0 0 66px !important;
+  padding: 12px 16px 7px !important;
 
   box-sizing: border-box !important;
 
@@ -996,26 +997,55 @@ h1,
   line-height: 1.35 !important;
   font-weight: 800 !important;
 
-  white-space: normal !important;
-  word-break: normal !important;
-  overflow: visible !important;
+  background: rgba(255,255,255,.25) !important;
+  border: 1px solid rgba(255,255,255,.48) !important;
+  border-bottom: 0 !important;
 
-  background: rgba(255,255,255,.28) !important;
-  border: 1px solid rgba(255,255,255,.45) !important;
-  border-radius: 14px !important;
+  border-radius: 14px 14px 0 0 !important;
 
-  backdrop-filter: blur(5px) !important;
-  -webkit-backdrop-filter: blur(5px) !important;
+  box-shadow: none !important;
+  backdrop-filter: blur(4px) !important;
+  -webkit-backdrop-filter: blur(4px) !important;
 
-  box-shadow: 0 5px 15px rgba(20,60,120,.08) !important;
-  text-shadow: 0 1px 3px rgba(255,255,255,.75) !important;
+  text-shadow: 0 1px 3px rgba(255,255,255,.85) !important;
+}
+
+.adventure-note,
+.adventure {
+  width: 410px !important;
+  max-width: 410px !important;
+  min-height: 0 !important;
+
+  box-sizing: border-box !important;
+
+  margin: 0 0 18px 66px !important;
+  padding: 5px 16px 11px !important;
+
+  justify-content: flex-start !important;
+
+  color: #1544ac !important;
+  font-size: 16px !important;
+  font-weight: 900 !important;
+
+  background: rgba(255,255,255,.25) !important;
+  border: 1px solid rgba(255,255,255,.48) !important;
+  border-top: 0 !important;
+
+  border-radius: 0 0 14px 14px !important;
+
+  backdrop-filter: blur(4px) !important;
+  -webkit-backdrop-filter: blur(4px) !important;
+
+  text-shadow: 0 1px 3px rgba(255,255,255,.85) !important;
 }
 
 @media (max-width: 850px) {
-  .hero-description {
-    width: 88vw !important;
-    min-width: 0 !important;
-    max-width: 420px !important;
-    margin: 6px auto 12px !important;
+  .hero-description,
+  .adventure-note,
+  .adventure {
+    width: min(390px, 88vw) !important;
+    max-width: 390px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
   }
 }
