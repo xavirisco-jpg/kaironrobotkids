@@ -980,28 +980,46 @@ h1,
     font-size: 17px !important;
   }
 }
-/* DESCRIPCIÓN HERO - remate */
+/* DESCRIPCIÓN HERO - definitiva */
 .hero-description {
-  width: 460px !important;
-  max-width: 460px !important;
+  width: 500px !important;
+  max-width: 500px !important;
+  min-width: 500px !important;
   height: auto !important;
-  min-height: 0 !important;
 
-  margin: 4px 0 10px 66px !important;
-  padding: 14px 18px !important;
+  margin: 6px 0 12px 66px !important;
+  padding: 14px 20px !important;
+
+  display: block !important;
+  box-sizing: border-box !important;
+
+  color: #12336d !important;
+  font-size: 18px !important;
+  line-height: 1.4 !important;
+  font-weight: 800 !important;
 
   white-space: normal !important;
-  overflow: visible !important;
-  overflow-wrap: normal !important;
   word-break: normal !important;
+  overflow-wrap: normal !important;
+  overflow: visible !important;
 
-  line-height: 1.4 !important;
+  background: rgba(255,255,255,.38) !important;
+  border: 1px solid rgba(255,255,255,.62) !important;
+  border-radius: 18px !important;
+
+  backdrop-filter: blur(6px) !important;
+  -webkit-backdrop-filter: blur(6px) !important;
+
+  box-shadow:
+    0 8px 22px rgba(12,54,125,.10),
+    inset 0 1px 0 rgba(255,255,255,.60) !important;
 }
 
 @media (max-width: 850px) {
   .hero-description {
-    width: min(410px, 88vw) !important;
-    max-width: min(410px, 88vw) !important;
-    margin: 4px auto 10px !important;
+    width: 88vw !important;
+    max-width: 410px !important;
+    min-width: 0 !important;
+    margin: 6px auto 12px !important;
   }
 }
