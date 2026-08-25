@@ -1178,47 +1178,78 @@ h1,
   }
 }
 /* =========================================================
-   FONDO GENERAL - CIELO SUAVE
+   FONDO GENERAL V1 - CAMBIO VISIBLE
    ========================================================= */
 
 body {
-  background:
-    radial-gradient(
-      circle at 8% 18%,
-      rgba(255,255,255,.90) 0 90px,
-      transparent 180px
-    ),
-
-    radial-gradient(
-      circle at 92% 32%,
-      rgba(255,255,255,.72) 0 110px,
-      transparent 220px
-    ),
-
-    radial-gradient(
-      circle at 15% 68%,
-      rgba(188,225,255,.28) 0 120px,
-      transparent 260px
-    ),
-
-    radial-gradient(
-      circle at 88% 82%,
-      rgba(207,235,255,.38) 0 100px,
-      transparent 240px
-    ),
-
-    linear-gradient(
-      180deg,
-      #eef9ff 0%,
-      #e7f5ff 40%,
-      #f4faff 72%,
-      #e9f6ff 100%
-    ) !important;
-
-  background-attachment: scroll !important;
+  background: #cfeeff !important;
 }
 
-/* El contenido deja ver el fondo general */
+/* Toda la zona bajo el hero */
 .content-section {
-  background: transparent !important;
+  position: relative !important;
+
+  background:
+
+    /* gran nube blanca arriba izquierda */
+    radial-gradient(
+      ellipse at 0% 10%,
+      rgba(255,255,255,.95) 0 180px,
+      rgba(255,255,255,.45) 300px,
+      transparent 480px
+    ),
+
+    /* resplandor amarillo arriba derecha */
+    radial-gradient(
+      ellipse at 100% 20%,
+      rgba(255,225,105,.48) 0 170px,
+      rgba(255,240,180,.25) 300px,
+      transparent 470px
+    ),
+
+    /* mancha verde pastel */
+    radial-gradient(
+      ellipse at 5% 52%,
+      rgba(110,225,180,.38) 0 190px,
+      rgba(160,240,210,.18) 330px,
+      transparent 500px
+    ),
+
+    /* mancha rosa/lila */
+    radial-gradient(
+      ellipse at 96% 58%,
+      rgba(230,160,255,.30) 0 180px,
+      rgba(240,200,255,.15) 320px,
+      transparent 500px
+    ),
+
+    /* azul más vivo abajo */
+    radial-gradient(
+      ellipse at 20% 90%,
+      rgba(80,180,255,.38) 0 180px,
+      transparent 460px
+    ),
+
+    /* luz cálida final */
+    radial-gradient(
+      ellipse at 85% 92%,
+      rgba(255,205,100,.34) 0 170px,
+      transparent 430px
+    ),
+
+    /* base */
+    linear-gradient(
+      180deg,
+      #cfeeff 0%,
+      #e8f8ff 24%,
+      #d9f4ff 48%,
+      #eef9ff 72%,
+      #d8efff 100%
+    ) !important;
+}
+
+/* Las zonas interiores no tapan el fondo */
+.content-section > .wrap {
+  position: relative !important;
+  z-index: 1 !important;
 }
