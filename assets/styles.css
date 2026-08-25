@@ -1515,3 +1515,27 @@ body {
     background-size: 470px 320px !important;
   }
 }
+/* =========================================================
+   TARJETAS - SOLAPE SUAVE CON EL HERO
+   Aproximadamente 0,7 cm
+   ========================================================= */
+
+.content-section {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+  overflow: visible !important;
+}
+
+.cards {
+  position: relative !important;
+  z-index: 3 !important;
+
+  margin-top: -27px !important;
+}
+
+/* En móvil, un poco menos de solape */
+@media (max-width: 700px) {
+  .cards {
+    margin-top: -18px !important;
+  }
+}
