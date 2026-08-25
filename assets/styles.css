@@ -1691,3 +1691,22 @@ body {
     font-size: 8px !important;
   }
 }
+/* =========================================================
+   TARJETAS - SOLAPE REAL SOBRE EL HERO
+   ========================================================= */
+
+.cards {
+  position: relative !important;
+  z-index: 20 !important;
+
+  transform: translateY(-34px) !important;
+  margin-bottom: -34px !important;
+}
+
+/* móvil: algo menos de invasión */
+@media (max-width: 700px) {
+  .cards {
+    transform: translateY(-22px) !important;
+    margin-bottom: -22px !important;
+  }
+}
