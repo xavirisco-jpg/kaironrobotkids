@@ -1471,7 +1471,7 @@ body {
   z-index: 0 !important;
   pointer-events: none !important;
 
-  opacity: .42 !important;
+  opacity: .55 !important;
 
   background-image:
     url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='620' height='420' viewBox='0 0 620 420'%3E%3Cg opacity='.72'%3E%3Cpolygon points='70,18 84,55 124,55 92,78 104,116 70,93 36,116 48,78 16,55 56,55' fill='%23ffe48a'/%3E%3Cellipse cx='320' cy='78' rx='44' ry='56' fill='%23fff3c4' stroke='%23f5c46c' stroke-width='6'/%3E%3Ccircle cx='528' cy='122' r='46' fill='%23ffc17a'/%3E%3Cpath d='M515 78 Q528 56 548 72 Q533 79 521 89Z' fill='%237fd9a8'/%3E%3Cpath d='M112 286 C92 252 122 224 160 236 C198 224 228 252 208 286 C190 320 160 342 160 342 C160 342 130 320 112 286Z' fill='%23ff9fb6'/%3E%3Cpath d='M128 238 Q160 210 192 238 Q160 246 128 238Z' fill='%237fd9a8'/%3E%3Cpolygon points='470,270 483,304 520,304 490,326 501,362 470,340 439,362 450,326 420,304 457,304' fill='%23d7b5ff'/%3E%3C/g%3E%3C/svg%3E") !important;
@@ -1511,7 +1511,7 @@ body {
   }
 
   .content-section::before {
-    opacity: .30 !important;
+    opacity: .42 !important;
     background-size: 470px 320px !important;
   }
 }
