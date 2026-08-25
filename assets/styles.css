@@ -1177,3 +1177,48 @@ h1,
     margin-top: 8px !important;
   }
 }
+/* =========================================================
+   FONDO GENERAL - CIELO SUAVE
+   ========================================================= */
+
+body {
+  background:
+    radial-gradient(
+      circle at 8% 18%,
+      rgba(255,255,255,.90) 0 90px,
+      transparent 180px
+    ),
+
+    radial-gradient(
+      circle at 92% 32%,
+      rgba(255,255,255,.72) 0 110px,
+      transparent 220px
+    ),
+
+    radial-gradient(
+      circle at 15% 68%,
+      rgba(188,225,255,.28) 0 120px,
+      transparent 260px
+    ),
+
+    radial-gradient(
+      circle at 88% 82%,
+      rgba(207,235,255,.38) 0 100px,
+      transparent 240px
+    ),
+
+    linear-gradient(
+      180deg,
+      #eef9ff 0%,
+      #e7f5ff 40%,
+      #f4faff 72%,
+      #e9f6ff 100%
+    ) !important;
+
+  background-attachment: scroll !important;
+}
+
+/* El contenido deja ver el fondo general */
+.content-section {
+  background: transparent !important;
+}
