@@ -21,8 +21,9 @@ Updated analytics deployment test.
 - English / Spanish language toggle
 - YouTube call-to-action
 - Functional contact flow that opens the visitor's email app (works with static GitHub Pages hosting)
+- Google Analytics integration in `assets/analytics.js`
 - Privacy Policy and Terms pages
 
 ## Important legal note
 
-The privacy and terms pages are a practical starter draft for this exact static site. Before enabling analytics, ad pixels, embedded forms, newsletters, or collecting data directly, update the policy and get legal review for your final setup.
+The privacy and terms pages are a practical starter draft for this exact static site. Google Analytics is loaded through `assets/analytics.js` only after the visitor accepts analytics, with ad personalization disabled. Cloudflare Web Analytics may also be injected by the hosting configuration. If you later add ad pixels, embedded forms, newsletters, or new data collection, update the policy and get legal review for your final setup.
